@@ -1,0 +1,29 @@
+{
+  "name": "magento-yourcar.com",
+  "version": "0.1.0",
+  "description": "magento project using gruntjs tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/NataliaMiku/mage-grunt-yourcar.git"
+  },
+  "keywords": [
+    "magento",
+    "gruntjs",
+    "sass",
+    "compass"
+  ],
+  "author": "natalie.miku@gmail.com",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/NataliaMiku/mage-grunt-yourcar/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-compass": "~1.0.1",
+    "grunt-contrib-watch": "~0.6.1"
+  }
+}

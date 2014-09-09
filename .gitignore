@@ -6,6 +6,7 @@
 *.bak
 *.swp
 *~.nib
+log/
 public/app/code/community/Phoenix/
 public/app/code/community/Cm/
 public/app/code/core/
