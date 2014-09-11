@@ -6,6 +6,9 @@
 *.bak
 *.swp
 *~.nib
+.sass-cache
+bower_components/
+node_modules/
 log/
 public/app/code/community/Phoenix/
 public/app/code/community/Cm/
