@@ -1,0 +1,49 @@
+{
+  "name": "magento-yourcar.com",
+  "version": "0.1.0",
+  "homepage": "https://github.com/NataliaMiku/mage-grunt-yourcar",
+  "authors": [
+    "Natalia <natalie.miku@gmail.com>"
+  ],
+  "description": "magento project using gruntjs tool, bower packages",
+  "main": "public/index.php",
+  "keywords": [
+    "jquery",
+    "bootstrap-sass",
+    "respond",
+    "html5shiv"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.2.0+2",
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2"
+  },
+  "devDependencies": {
+    "bootstrap-sass-official": "~3.2.0+2",
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2"
+  },
+  "exportsOverride": {
+    "bootstrap-sass": {
+        "js": "assets/javascripts/*.js",
+        "scss": "assets/stylesheets/bootstrap/*.scss"
+    },
+    "html5shiv": {
+      "js": "**/html5shiv.min.js"
+    },
+    "jquery": {
+      "js": "**/jquery.min.js"
+    },
+    "respond": {
+      "js": "**/respond.min.js"
+    }
+  }
+}

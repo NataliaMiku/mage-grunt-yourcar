@@ -2,7 +2,7 @@
   "name": "magento-yourcar.com",
   "version": "0.1.0",
   "description": "magento project using gruntjs tool",
-  "main": "index.js",
+  "main": "public/index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +24,9 @@
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-compass": "~1.0.1",
-    "grunt-contrib-watch": "~0.6.1"
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-uglify": "~0.5.1",
+    "grunt-bower": "~0.14.0",
+    "grunt-bower-task": "~0.4.0"
   }
 }

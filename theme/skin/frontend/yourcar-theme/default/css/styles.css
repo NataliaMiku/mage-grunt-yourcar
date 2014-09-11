@@ -30,7 +30,7 @@
 
 /* line 29, ../scss/styles.scss */
 body {
-  background: #000 url(../images/bkg_body.gif) 0 0 repeat;
+  background: #fcfcfc;
   font: 11px/1.55 arial, helvetica, sans-serif;
   color: #444;
   text-align: center; }
