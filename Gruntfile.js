@@ -60,16 +60,7 @@ module.exports = function(grunt) {
 					//so they are not clash with Magento JS
 					mangle: false,
 					compress: true
-				},
-				my_target: {
-			      files: [{
-			          expand: true,
-			          ext: '.min.js',
-			          cwd: skinDir + 'src/js',
-			          src: '**/*.js',
-			          dest: skinDir + 'js'
-			      }]
-			    }
+				}			
 				/*files: {
 					skinDir + 'js/html5shiv.min.js': [skinDir + 'src/js/html5shiv.js'], 
 					skinDir + 'js/jquery.min.js': [skinDir + 'src/js/jquery.js'], 
@@ -77,7 +68,16 @@ module.exports = function(grunt) {
 					skinDir + 'js/respond.min.js': [skinDir + 'src/js/bootstrap/bootstrap.js'],
 					skinDir + 'js/jquery.scripts.min.js': [skinDir + 'src/js/vendor/jquery.scripts.js']
 				}*/
-			}
+			},
+			all: {
+		        files: [{
+		            expand: true,
+		            src: ['*.js','**/*.js','!*/bootstrap/*.js'],
+		            dest: skinDir + 'js',
+		            cwd: skinDir + 'src/js',
+		            ext: '.min.js'
+		        }]
+		    }
 		},
 		bower: {
 		  dev: {
