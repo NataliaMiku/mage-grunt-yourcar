@@ -40,17 +40,11 @@ module.exports = function(grunt) {
 		},
 		jshint: {
 			options: {
-		        curly: true,
-		        eqeqeq: true,
-		        eqnull: true,
-		        browser: true,
-		        globals: {
-		          jQuery: true
-		        }
+				jshintrc: '.jshintrc'
 		    },
 			all: [
-				'Gruntfile.js',
-				skinDir + 'src/js/{,*/}*.js'
+				'Gruntfile.js', 
+				skinDir + 'src/js/vendor/{,*/}*.js' 
 			]
 		},
 		uglify: {
@@ -60,14 +54,7 @@ module.exports = function(grunt) {
 					//so they are not clash with Magento JS
 					mangle: false,
 					compress: true
-				}			
-				/*files: {
-					skinDir + 'js/html5shiv.min.js': [skinDir + 'src/js/html5shiv.js'], 
-					skinDir + 'js/jquery.min.js': [skinDir + 'src/js/jquery.js'], 
-					skinDir + 'js/respond.min.js': [skinDir + 'src/js/respond.js'],
-					skinDir + 'js/respond.min.js': [skinDir + 'src/js/bootstrap/bootstrap.js'],
-					skinDir + 'js/jquery.scripts.min.js': [skinDir + 'src/js/vendor/jquery.scripts.js']
-				}*/
+				}
 			},
 			all: {
 		        files: [{
