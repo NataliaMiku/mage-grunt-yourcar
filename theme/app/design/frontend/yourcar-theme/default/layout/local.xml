@@ -18,11 +18,11 @@
 		    </action>
 		    <action method="addItem">
 		        <type>skin_js</type>
-		        <name>js/bootstrap.min.js</name>
+		        <name>js/bootstrap/bootstrap.min.js</name>
 		    </action>
 		    <action method="addItem">
 		        <type>skin_js</type>
-		        <name>js/jquery.scripts.min.js</name>
+		        <name>js/vendor/scripts.min.js</name>
 		    </action>
 		    <action method="addItem">
 		        <type>skin_js</type>

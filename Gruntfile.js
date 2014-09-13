@@ -26,13 +26,13 @@ module.exports = function(grunt) {
 					appDir + '**/*.xml',
 					skinDir + 'src/scss/{,*/}*.scss',
 					[
-						skinDir + 'src/*.js', 
-						skinDir + 'src/**/*.js',
+						skinDir + 'src/{,*/,*/*/}*.js',
 						'!' + skinDir + 'js/*.min.js'
 					]
 				],
 				tasks: [
 					'compass',
+					'clean:scss',
 					'jshint',
 					'uglify'
 				]
@@ -113,6 +113,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-bower');
 	grunt.registerTask('default', [
 			'compass',
+			'clean:scss',
 			'jshint',
 			'uglify'
 	]);
