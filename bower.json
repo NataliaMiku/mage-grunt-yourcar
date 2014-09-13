@@ -33,17 +33,7 @@
   },
   "exportsOverride": {
     "bootstrap-sass": {
-        "js": "assets/javascripts/*.js",
-        "scss": "assets/stylesheets/bootstrap/*.scss"
-    },
-    "html5shiv": {
-      "js": "**/html5shiv.min.js"
-    },
-    "jquery": {
-      "js": "**/jquery.min.js"
-    },
-    "respond": {
-      "js": "**/respond.min.js"
+      "scss": "assets/stylesheets/bootsrap/**.scss"
     }
-  }
+  }  
 }

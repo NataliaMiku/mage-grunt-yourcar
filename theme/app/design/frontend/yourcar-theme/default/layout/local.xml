@@ -18,15 +18,15 @@
 		    </action>
 		    <action method="addItem">
 		        <type>skin_js</type>
-		        <name>js/bootstrap.js</name>
+		        <name>js/bootstrap.min.js</name>
 		    </action>
 		    <action method="addItem">
 		        <type>skin_js</type>
-		        <name>js/jquery.scripts.js</name>
+		        <name>js/jquery.scripts.min.js</name>
 		    </action>
 		    <action method="addItem">
 		        <type>skin_js</type>
-		        <name>js/html5shiv.js</name>
+		        <name>js/html5shiv.min.js</name>
 		        <params/>
 		        <if>lt IE 9</if>
 		    </action>
