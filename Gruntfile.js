@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 	var skinDir = 'theme/skin/frontend/yourcar-theme/default/';
 	var appDir = 'theme/app/design/frontend/yourcar-theme/default/';
+	
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -9,8 +10,9 @@ module.exports = function(grunt) {
 				options: {
 					sassDir: skinDir + 'src/scss',
 					cssDir: skinDir + 'css',
+					importPath: 'bower_components',
 					environment: 'development',
-					outputStyle: 'nested'
+					//config: 'config.rb'
 				}
 			}
 		},
@@ -24,6 +26,7 @@ module.exports = function(grunt) {
 			livereload: {
 				files: [
 					appDir + '**/*.xml',
+					skinDir + 'src/images/{,*/}*.{png,jpg,gif}',
 					skinDir + 'src/scss/{,*/}*.scss',
 					[
 						skinDir + 'src/{,*/,*/*/}*.js',
@@ -33,8 +36,10 @@ module.exports = function(grunt) {
 				tasks: [
 					'compass',
 					'clean:scss',
+					'clean:images',
 					'jshint',
-					'uglify'
+					'uglify',
+					'imagemin'
 				]
 			}
 		},
@@ -66,24 +71,37 @@ module.exports = function(grunt) {
 		        }]
 		    }
 		},
+		imagemin: {
+		    dynamic: {
+		        files: [{
+		            expand: true,
+		            cwd: skinDir + 'src/images',
+		            src: '**/*.{png,jpg,gif}',
+		            dest: skinDir + 'images/'
+		        }]
+		    }
+		},
 		bower: {
 		  dev: {
 		  	dest: skinDir + 'src',
 		  	js_dest: skinDir + 'src/js',		    
-		  	scss_dest: skinDir + 'src/scss',		    
+		  	scss_dest: skinDir + 'src/scss',		  			    
 		    options: {
 		      stripAffix: true,	
 		      packageSpecific: {
 		        "bootstrap-sass-official": {		          
 		          js_dest: skinDir + 'src/js/bootstrap',
       			  scss_dest: skinDir + 'src/scss/modules/bootstrap',
-      			  dest: skinDir + 'src/fonts/bootsrap',
+      			  dest: skinDir + 'fonts/bootsrap',
       			  keepExpandedHierarchy: true,
 		          files: [
 		           	'assets/javascripts/**',
 		           	'assets/fonts/**',
 		           	'assets/stylesheets/**'
 		          ]		             			  
+		        },
+		        "font-awesome": {
+		        	dest: skinDir + 'fonts/font-awesome'
 		        }	        
 		      }
 		    }
@@ -98,7 +116,8 @@ module.exports = function(grunt) {
 		  scss: [
 		  		skinDir + 'src/scss/modules/bootstrap/_bootstrap.scss',
 		  		skinDir + 'src/scss/modules/bootstrap/_bootstrap-*.scss'
-		  ]
+		  ],
+		  images: [skinDir + 'images']
 		}
 
 		
@@ -107,20 +126,23 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-bower-task');
 	grunt.renameTask("bower", "bowerInstall");
 	grunt.loadNpmTasks('grunt-bower');
 	grunt.registerTask('default', [
 			'compass',
-			'clean:scss',
+			'imagemin',
+			'clean:images',
+			//'clean:scss',
 			'jshint',
 			'uglify'
 	]);
 	grunt.registerTask('build', [
 			'bowerInstall',
 			'bower',
-			'clean'
+			'clean:scss'
 	]);
 
 	

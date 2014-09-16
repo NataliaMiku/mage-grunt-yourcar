@@ -44,15 +44,58 @@
 		    </action>
 		    <!-- Adding Bootstrap Css -->
 		    <action method="addCss">
-		        <stylesheet>css/bootstrap.css</stylesheet>
+		        <stylesheet>css/app.css</stylesheet>
 		    </action>
 		    <!-- Adding the styles.css -->
 		    <action method="addItem">
 		        <type>skin_css</type>
 		        <stylesheet>css/styles.css</stylesheet>
-		    </action>
-
-			
+		    </action>			
 		</reference>
 
-	</default> 
+		<!-- Header -->
+	    <reference name="header">
+	    	<!-- topbar_nav -->
+			<block type="cms/block" name="topbar_nav" as="topbar_nav">
+				<action method="setBlockId">
+					<block_id>topbar_nav</block_id>
+				</action>
+			</block>
+			<block type="cms/block" name="topbar_social" as="topbar_social">
+				<action method="setBlockId">
+					<block_id>topbar_social</block_id>
+				</action>
+			</block>
+
+
+
+
+			<block type="checkout/cart_sidebar" name="top_cart" template="checkout/cart/topcart.phtml" before="-">
+				<action method="addItemRender">
+					<type>simple</type>
+					<block>checkout/cart_item_renderer</block>
+					<template>checkout/cart/sidebar/default.phtml</template>
+				</action>
+				<action method="addItemRender">
+					<type>grouped</type>
+					<block>checkout/cart_item_renderer_grouped</block>
+					<template>checkout/cart/sidebar/default.phtml</template>
+				</action>
+				<action method="addItemRender">
+					<type>configurable</type>
+					<block>checkout/cart_item_renderer_configurable</block>
+					<template>checkout/cart/sidebar/default.phtml</template>
+				</action>
+				<block type="core/text_list" name="cart_sidebar.extra_actions" as="extra_actions" translate="label" module="checkout">
+					<label>Shopping Cart Sidebar Extra Actions</label>
+				</block>
+			</block>
+	    </reference>
+		<!-- // Header -->
+
+
+
+
+
+	</default>
+</layout>	 

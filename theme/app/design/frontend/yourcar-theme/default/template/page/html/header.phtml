@@ -1,40 +1,120 @@
 <?php
 /**
- * Magento
+ * Custom Bootstrap3 theme for magento-yourcar.com
  *
- * NOTICE OF LICENSE
+ * @category    Design
+ * @package     yourcar-theme
+ * @copyright   Copyright (c) 2014 Natalie Miku (natalie.miku@gmail.com)
+ * @license     MIT
+ * 
  *
- * This source file is subject to the Academic Free License (AFL 3.0)
- * that is bundled with this package in the file LICENSE_AFL.txt.
- * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/afl-3.0.php
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade Magento to newer
- * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magentocommerce.com for more information.
- *
- * @category    design
- * @package     default_modern
- * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
- * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
- */
-/**
- * @var Mage_Page_Block_Html_Header $this
- */
-?>
+ **/?>
+
+    <div class="container nav-container">
+        <!-- topbar-nav -->
+        <div class="row topbar-nav">
+            <div class="col-md-6">
+                <?php echo $this->getChildHtml('topbar_nav') ?>                
+            </div>
+            <div class="col-md-6">
+                <?php echo $this->getChildHtml('topbar_social') ?>                    
+            </div>
+        </div>
+        <!-- header-nav -->
+        <div class="row header-nav">
+            <div class="col-md-4">
+                    <div class="main-logo">
+                       <h1 class="name">
+                            <a class="navbar-brand" href="#" title="YourCar Car Dealership">
+                                <img src="images/logo.png" alt="YourCar Dealership" />
+                            </a>
+                       </h1>
+                   </div>
+            </div>
+            <div class="col-md-4">
+                    <div class="nav-info">
+                        <span><i class="fa fa-phone"></i></span>
+                        <span class="info-phone">
+                            <h6>Need help from us? Feel free to call us:</h6>
+                            <h6><strong>021-110-66-51</strong></h6>
+                        </span>
+                    </div>
+            </div>
+            <div class="col-md-4">
+                    <div class="nav-info">
+                        <span><i class="fa fa-map-marker"></i></span>
+                        <span class="info-map">
+                            <h6>Want to Meet? Find us here:</h6>
+                            <h6>7 Sylvia Park Rd, Mt Wellington, Auckland</h6>
+                            <h6>Monday - Sunday (By Appointment)</h6>
+                        </span>
+                    </div>
+            </div>
+        </div>
+        <!-- main-nav -->
+        <nav class="navbar navbar-default main-nav" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Title</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+
+
+
+
+
+
+
+
 <div class="header-container">
     <div class="header">
         <?php if ($this->getIsHomePage()):?>
-        <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+        <h1 class="logo">
+            <strong>
+                    <?php echo $this->getLogoAlt() ?>
+            </strong>
+            <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
+                    <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" />
+            </a>
+        </h1>
         <?php else:?>
-        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
+            <strong><?php echo $this->getLogoAlt() ?></strong>
+            <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" />
+        </a>
         <?php endif?>
-        <p class="top-promo" title="<?php echo $this->__('Free Shipping on orders over 50$'); ?>"><?php echo $this->__('Free Shipping on orders over 50$'); ?></p>
+        <p class="top-promo" title="<?php echo $this->__('Free Shipping on orders over 50$'); ?>"><?php echo $this->__('Free Shipping on orders over 50$'); ?>
+        </p>
         <?php echo $this->getChildHtml('topMenu') ?>
     </div>
     <div class="quick-access">
@@ -45,3 +125,7 @@
     <?php echo $this->getChildHtml('topBar') ?>
     <?php echo $this->getChildHtml('topContainer'); ?>
 </div>
+
+<!-- main-header -->
+
+    <!-- navigation -->
