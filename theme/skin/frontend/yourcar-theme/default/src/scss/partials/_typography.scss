@@ -1,0 +1,110 @@
+/* _typography.scss
+ * ------------------------------------------------------------------------- */
+
+$fa-font-path: "../fonts/font-awesome";
+@import "font-awesome/scss/font-awesome";
+@import "../helpers/mixins";
+
+
+@include webfont('bebasneue', 'bebasneue/bebasneue', 500);
+
+
+$bebasneue: 'bebasneue';
+
+
+
+
+/* ==========================================================================
+   		Top navigation
+   ========================================================================== */
+
+   .nav-container {
+   		color: #fff;
+   		.header-nav {   			
+   			span {
+   				i.fa.fa-phone,
+   				i.fa.fa-map-marker {
+   					font-size: 2em;
+					@include border-radius(1000px);
+					//display: block;
+					margin-right: 0.5em;
+					height: 2.3em;
+					width: 2.3em;
+					text-align: center;
+					line-height: 2em;
+					border-width: 0.15em;
+					border-style: solid;
+					position: absolute;
+					top: 0.3em;
+   				}
+   				h2 {
+   					margin-top: 0;
+   				}
+   			}
+   			.nav-info {
+   				.info-map {
+   					>h5 {   						
+   						>strong {
+   							font-size: 0.9em;
+   						}
+   					}
+   				}
+   			}   			
+   		}
+   		.main-nav {
+
+			ul.navbar-nav {
+				margin-left: -30px;
+				li {
+					@include transition(background 0.5s ease);
+					@include background-image(linear-gradient($gray-darker, $gray-darker 50%, $primary 50%, $primary));
+					background-size: 100% 200%;
+					>a{
+						font-family: $bebasneue;
+						font-size: 2.5em;
+						text-transform: uppercase;
+						color: #fff;
+						padding: 0.5em 1em;
+						
+						&:hover {
+							//height: 100%;
+							///background: $primary;
+						}
+					}
+					&:hover {
+						//background-color: $primary;
+						background-position: 100% 100%;
+						//height: 100%;
+					}
+				}
+			}
+			form.navbar-form {
+				padding-top: 1em;
+				input{					
+					background: $jet-mid;
+					border-left: 5px solid #000;
+					padding-left: 2.5em;
+					border-top: 0;
+					border-right: 0;
+					border-bottom: 0;
+					border-radius: 0;
+					color: #fff;
+					box-shadow: 0 1px 1px rgba(60, 60, 60, 0.075);
+					@include transition(all 0.5s ease);
+					&:focus,
+					&:hover,
+					&.active {
+						border-left: 5px solid $primary;
+					}
+				}
+				i.fa.fa-search {
+					position: absolute;
+					color: $iron;
+					padding: 0.7em 0.8em;
+				}
+			}	
+   		}
+   }
+
+
+

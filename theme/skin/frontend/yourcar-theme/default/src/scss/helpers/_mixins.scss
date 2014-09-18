@@ -1,0 +1,22 @@
+/* _mixins.scss
+ * ------------------------------------------------------------------------- */
+//@import "compass/css3/font-face";
+
+@mixin webfont($name, $base_filename, $weights, $style: 'normal') {    
+    // Add i.e. "-italic" to italic style fonts
+    $style : '';
+    @if $style != 'normal' {
+        $style : '-#{$style}';
+    }
+
+    @each $weight in $weights {
+        @include font-face(
+            $name,
+            font-files(
+                '#{$base_filename}_#{$weight}#{$style}.woff', woff, 
+                '#{$base_filename}_#{$weight}#{$style}.ttf', ttf), 
+            '#{$base_filename}_#{$weight}#{$style}.eot', 
+            $weight
+        );
+    }
+}

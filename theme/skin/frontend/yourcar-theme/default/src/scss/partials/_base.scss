@@ -1,0 +1,98 @@
+/* _base.scss
+ * ------------------------------------------------------------------------- */
+ @import "compass";
+ @import "../modules/bootstrap";
+ 
+ 
+  /* ==========================================================================
+   		Global
+   ========================================================================== */
+
+   body {
+   		background-image: url('images/bg.jpg');
+   }
+
+
+
+ /* ==========================================================================
+   		Top navigation
+   ========================================================================== */
+
+   .nav-container {
+		.topbar-nav {
+	   		background: $primary;   		
+	   		height: $navbar-height;
+	   		.navbar-nav {
+				> li > a {
+					color: $brand-primary;
+					&:hover,
+					&:focus {
+						color: $gray-dark;
+						background-color: transparent;
+					}	
+				}
+			}   		
+	    }
+	    .header-nav {
+	    	background-color: $gray-dark;
+	    	padding: 1em 0;
+	    	.navbar-brand {
+	    		height: auto;
+	    		img {
+	    			width: 80%;
+	    		}
+	    	}
+
+	    	.nav-info {
+	    		>span {
+	    			display: inline-block;
+	    		}
+   				.info-map,
+   				.info-phone {
+   					float: right;
+   				}
+   				.info-map {
+   					>h5 {
+   						>i {
+							margin-right: 0.5em;
+   						}
+   					}
+   				}
+   			}
+	    }
+	    .main-nav {
+	    	background: $gray-darker;
+	    	//padding: 0.5em 0;
+	    	border-bottom: 3px solid $primary;
+
+	    	.navbar {
+	    		border: none;
+	    		background-color: transparent;
+				border-color: transparent;
+				margin-bottom: 0;	    	
+	    	}
+	    }
+	    .nav-toggler{
+	    	margin-right: -15px;
+	    	.toggler-btn {
+	    		width: 3em;
+	    		height: 3em;
+	    		color: $iron;
+	    		background: $primary;
+	    		cursor: pointer;
+	    		@include transition(all 0.5s ease);
+	    		i.fa.fa-eject {
+	    			padding: 1em;
+	    			@include transform(rotate(180deg));
+	    		}
+	    		&:hover,
+	    		&:focus {
+	    			background: $gray-darker;
+	    			i.fa.fa-eject {
+	    				@include transform(rotate(0deg));
+	    			}	    			
+	    		}
+	    	}
+	    }
+   }
+   

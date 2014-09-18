@@ -25,8 +25,8 @@
             <div class="col-md-4">
                     <div class="main-logo">
                        <h1 class="name">
-                            <a class="navbar-brand" href="#" title="YourCar Car Dealership">
-                                <img src="images/logo.png" alt="YourCar Dealership" />
+                            <a class="navbar-brand" href="#" title="YourCar">
+                                <img src="<?php echo $this->getSkinUrl('images/yourcar-img/yourcar-logo.png');?>" alt="YourCar" />
                             </a>
                        </h1>
                    </div>
@@ -34,9 +34,9 @@
             <div class="col-md-4">
                     <div class="nav-info">
                         <span><i class="fa fa-phone"></i></span>
-                        <span class="info-phone">
-                            <h6>Need help from us? Feel free to call us:</h6>
-                            <h6><strong>021-110-66-51</strong></h6>
+                        <span class="info-phone text-center">
+                            <h5>Need help from us? Feel free to call us:</h5>
+                            <h2><strong>021-110-66-51</strong></h2>
                         </span>
                     </div>
             </div>
@@ -44,49 +44,65 @@
                     <div class="nav-info">
                         <span><i class="fa fa-map-marker"></i></span>
                         <span class="info-map">
-                            <h6>Want to Meet? Find us here:</h6>
-                            <h6>7 Sylvia Park Rd, Mt Wellington, Auckland</h6>
-                            <h6>Monday - Sunday (By Appointment)</h6>
+                            <h5 class="text-center">Want to Meet? Find us here:</h5>
+                            <h5><i class="fa fa-home"></i><strong>7 Sylvia Park Rd, Mt Wellington, Auckland</strong></h5>
+                            <h5><i class="fa fa-clock-o"></i><strong>Monday - Sunday (By Appointment)</strong></h5>
                         </span>
                     </div>
             </div>
         </div>
         <!-- main-nav -->
-        <nav class="navbar navbar-default main-nav" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Title</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
+        <div class=" row main-nav">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <nav class="navbar navbar-default" role="navigation">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- <a class="navbar-brand" href="#">Title</a> -->
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">OUR STOCK</a></li>
+                            <li><a href="#">FINANCE</a></li>
+                            <li><a href="#">ABOUT US</a></li>
+                            <li><a href="#">CONTACT US</a></li>
+                            <!-- <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </li> -->
+                        </ul>
+                        <form class="navbar-form navbar-right" role="search">
+                            <div class="form-group">
+                                <i class="fa fa-search"></i>
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="hidden btn btn-default">Submit</button>
+                        </form>
+                        
+                    </div><!-- /.navbar-collapse -->
+                </nav>
                 
-            </div><!-- /.navbar-collapse -->
-        </nav>
+            </div>            
+        </div>
+        <!-- toggle-button -->
+        <div class="nav-toggler pull-right">
+            <div class="toggler-btn">
+                <a href="#" class="btn-slide active"><i class="fa fa-eject"></i></a>
+            </div>
+        </div>
     </div>
 
 
